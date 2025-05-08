@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="calculator card">
+        <h2 class="head">Hesap Makinesi</h2>
+        <div class="card-body">
+            <input type="text" class="form-control display mb-3 text-right" id="display" disabled>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="clearDisplay()">C</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('7')">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('8')">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('9')">9</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('/')">/</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('4')">4</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('5')">5</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('6')">6</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('*')">*</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('1')">1</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('2')">2</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('3')">3</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('-')">-</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('0')">0</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('.')">.</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="calculateResult()">=</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary btn-block" onclick="appendNumber('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    const InputValue = document.querySelector("#display");
+
+function clearDisplay (){
+    InputValue.value = "";
+};
+const display = document.getElementById('display');
+
+function clearDisplay() {
+    display.value = '';
+}
+
+function appendNumber(number) {
+    display.value += number;
+}
+
+function calculateResult() {
+    try {
+        display.value = eval(display.value);
+    } catch (e) {
+        display.value = 'Error';
+    }
+}
+</script>
+</body>
+</html>

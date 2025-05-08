@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credid Card Tutorial</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="alert">
+
+    </div>
+    <div class="row card-container">
+      <!-- Input Form Section -->
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <div class="card-body boxShadow">
+            <h5 class="card-title">Kredi Kartı Bilgileri</h5>
+            <div class="Inputsposition">
+              <input id="Textarea" class="InputCardPositionStyle" type="text" placeholder="Kart Üzerindeki İsim Soyisim">
+              <input id="Numberarea" class="InputCardPositionStyle" type="number" placeholder="Kart Numarası">
+              <input id="Datearea" class="InputCardPositionStyle" type="date" placeholder="Son Kullanma Tarihi">
+            </div>
+            <select class="cardtype" name="KartTürü" id="KartTürü">
+              <option value="visa">VISA</option>
+              <option value="mastercard">Master Card</option>
+              <option value="americanexpress">American Express</option>
+              <option value="discovernetwork">Discover Network</option>
+              <option value="another">Diğer</option>
+            </select>
+            <input id="CCVarea" class="InputCardPositionStyle" type="number" placeholder="CCV">
+          </div>
+        </div>
+      </div>
+      <!-- Card Preview Section -->
+      <div class="col-md-6">
+        <div class="card card-custom">
+          <div class="card-body boxShadow">
+            <div class="CredidCard">
+              <div class="CredidCard__front">
+                <div class="CardTitle">
+                  <h2 class="Cardtitlenumber"></h2>
+                  <h2 class="CarTitlename"></h2>
+                  <h2 class="CardTitleDate"></h2>
+                </div>
+                <img id="cardID" class="Cardlogo" src="./card__img/mastercardlogo.png" alt="cardlogo">
+                <img class="CardChip" src="./card__img/chip.png" alt="chip">
+              </div>
+              <div class="CredidCard__back">
+                <div class="white__line"></div>
+                <h2 class="ccvtext"></h2>
+                <img class="temas" src="./card__img/temas.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
