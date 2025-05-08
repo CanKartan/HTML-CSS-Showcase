@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+
+    .homecontainer {
+        background: none !important;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        margin-top: 100vh;
+    }
+
+    .productsContainer {
+        order: 1;
+        padding: 10px;
+        background-image: none;
+        background: url(./assets/wallpapaer.png);
+    }
+
+    .formContainer {
+        order: 2;
+        padding: 10px;
+    }
+
+    .productsContainer h1,
+    .formContainer h1 {
+        font-size: 18px;
+    }
+
+    .formContainer h3,
+    .formContainer p {
+        font-size: 13px;
+    }
+
+    .formContainer input {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .productsContainer .card {
+        max-width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    .productsContainer .card img {
+        max-width: 200px;
+    }
+
+    .EkleBTN,
+    .talepBTN {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .logo {
+        width: 7vh;
+        margin: 10px auto;
+    }
+
+}

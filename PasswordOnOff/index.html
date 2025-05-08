@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şifre Göster/Gizle</title>
+  <style>
+    .password-container {
+      position: relative;
+      width: 300px;
+    }
+
+    #password {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #togglePassword {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="password-container">
+  <input type="password" id="password" placeholder="Şifre">
+  <span id="togglePassword" onclick="togglePasswordVisibility()">Göster/Gizle</span>
+</div>
+
+<script>
+  function togglePasswordVisibility() {
+    var passwordField = document.getElementById("password");
+    var toggleIcon = document.getElementById("togglePassword");
+
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      toggleIcon.innerText = "Gizle";
+    } else {
+      passwordField.type = "password";
+      toggleIcon.innerText = "Göster";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CanKartan</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Header Start -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="#">Can Kartan</a>
+        </div>
+        <ul>
+          <li><a href="./index.html" class="active" target="_blank">Home</a></li>
+          <li><a href="#">Who am I</a></li>
+          <li><a href="#">My Projects</a></li>
+          <input class="input" name="q" placeholder="Search on site...">
+          <input class="input-button"type="submit" value="Search">
+        </ul>
+      </div>
+      <!-- Header End -->
+      <!-- Body Start -->
+      <div class="body">
+        <h1>Welcome</h1>
+        <h2>C. Kartan</h2>
+      </div>
+      <div class="buttons">
+        <button>Contact Gmail</button>
+        <button>Contact Whatsapp</button>
+      </div>
+      <!-- Body End -->
+    </div>
+    <script>
+        var input = document.getElementById("input");
+
+
+        input.addEventListener("click", function(focus) {
+            input.focus(focus);
+        });
+    </script>
+  </body>
+</html>
